@@ -11,7 +11,14 @@ class Animal
     end
 
     ## a class method to find all animals who dont have a home yet :(
-
+    def find_all_homeless
+        Animal.all.map do |pet|
+          if  pet.owner == nil
+                pet
+          end 
+        end
+    end
+    
     def self.all 
         @@all
     end

@@ -50,7 +50,13 @@ class User
 
     ## a method thats us search for a specific species 
 
-
+    def search_type(type)
+        Animal.all.map do |pet|
+            if pet.type == type
+                pet
+            end
+        end
+    end
 
 
     def adopt_animal(animal_instance) # bob
